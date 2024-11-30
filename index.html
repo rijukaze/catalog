@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="icon.png" type="image/x-icon">
+  <title>RIJU KAZE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-orange-50">
+  <header class="bg-amber-900 text-white p-4">
+    <div class="container mx-auto text-center">
+      <h1 class="text-3xl font-semibold">Katalog Produk</h1>
+      <p class="mt-1">RIJU KAZE</p>
+    </div>
+  </header>
+  <section class="py-8">
+    <div class="container mx-auto px-4">
+      <div id="list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      </div>
+    </div>
+  </section>
+  <footer class="bg-stone-800 p-4 text-white text-center py-4 w-full">
+    <p>&copy; 2024 
+	<a href="https://www.instagram.com/rijukaze/" class="text-white" target="_blank">@rijukaze</a>
+    </p>
+  </footer>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+var data = [
+{
+	title:"CELANA PANJANG CHINO Slimfit",
+	desc:"CELANA Panjang CHINO kami berbahan katun Carbone premium yg nyaman dipakai",
+	link:"https://s.shopee.co.id/4pypQ9tfvs?share_channel_code=1",
+	foto:"https://down-id.img.susercontent.com/file/id-11134207-7r990-lqaf1gpa3gfif7.webp"
+},
+{
+	title:"CELANA PANJANG Cargo",
+	desc:"CELANA Panjang CARGO kami berbahan katun Carbone premium yang nyaman dipakai",
+	link:"https://s.shopee.co.id/10m6r9G7fF?share_channel_code=1",
+	foto:"https://down-id.img.susercontent.com/file/id-11134207-7r98t-lz3irej28d0b94.webp"
+},
+{
+	title:"CELANA PENDEK Cargo",
+	desc:"CELANA Panjang CARGO kami berbahan katun Carbone premium yang nyaman dipakai",
+	link:"https://s.shopee.co.id/2qDl2abyvq?share_channel_code=1",
+	foto:"https://down-id.img.susercontent.com/file/id-11134207-7r991-lzark8r6lom620.webp"
+},
+{
+	title:"CELANA PANJANG JEANS Slimfit",
+	desc:"CELANA Panjang JEANS kami berbahan Soft Jeans premium bisa elastis sampai 2-3 cm dan nyaman dipakai",
+	link:"https://s.shopee.co.id/8KYhag93p4?share_channel_code=1",
+	foto:"https://down-id.img.susercontent.com/file/id-11134207-7r98t-lq18ur25wv2dad.webp"
+},
+{
+	title:"CELANA PANJANG JEANS Slimfit Stretch",
+	desc:"CELANA Panjang JEANS kami berbahan Badjatex Denim Stretch yang nyaman dipakai",
+	link:"https://s.shopee.co.id/9A7oaHUoBm?share_channel_code=1",
+	foto:"https://down-id.img.susercontent.com/file/id-11134207-7r98v-ly6u52iek2md36.webp"
+},
+{
+	title:"CELANA PANJANG JEANS Slimfit Bikers",
+	desc:"CELANA Panjang JEANS kami berbahan Jeans Denim yang nyaman dipakai dan tidak kaku",
+	link:"https://s.shopee.co.id/4pypQIPdqC?share_channel_code=1",
+	foto:"https://down-id.img.susercontent.com/file/id-11134207-7r98s-llrclm09gh3ie1.webp"
+}
+]
+
+html="";
+for(var i = 0; i < data.length; i++){
+html+='<div class="pb-4 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">'
+      +'    <img src="'+data[i].foto+'" alt="Produk 1" class="w-full h-56 object-cover">'
+      +'    <div class="p-4">'
+      +'      <h2 class="text-xl font-semibold text-gray-800">No. '+(i+1)+" - "+data[i].title+'</h2>'
+      +'      <p class="text-gray-600 mt-2 mb-4">'+data[i].desc+'</p>'
+      +'      <a href="'+data[i].link+'" class="bg-orange-500 text-white py-2 px-4 rounded">Link Shopee</a>'
+      +'    </div>'
+      +'  </div>';
+}
+
+$("#list").html(html);
+</script>
+</html>
